@@ -1,0 +1,22 @@
+project '/Users/James/Desktop/xcode10Projects/Bware_ios/Bware.xcodeproj'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+target "Bware" do
+	pod 'Alamofire'
+	pod 'Flurry-iOS-SDK/FlurrySDK'
+	pod 'Charts'
+    pod 'GoogleMaps'
+    pod 'BFPaperButton'
+    pod 'RealmSwift'
+    pod 'GoogleAPIClientForREST/Drive', '~> 1.2.1'
+    pod 'Google/SignIn', '~> 3.0.3'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '4.2'
+    end
+  end
+end
+use_frameworks!
