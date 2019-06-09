@@ -8,7 +8,7 @@
 
 ### Google Drive integration to backup/restore local items (Realm) db
 
-### Also utilizes UserDefaults, Share Sheet, SKProduct, Webview
+### Also utilizes UserDefaults, Share Sheet, SKProduct, Webview, Charts (MPAndroid port)
 
 ---
 ##### Pods 
