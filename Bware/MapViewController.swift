@@ -83,7 +83,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
      
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
        // mapView.mapType = .hybrid
-        mapView.isTrafficEnabled = true
         
         mapView.delegate = self
         self.view = mapView
