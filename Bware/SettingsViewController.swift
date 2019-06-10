@@ -21,6 +21,7 @@ class SettingsViewController: UIViewController {
 
    // @IBOutlet weak var bridgeHeightSwitch: UISwitch!
    // @IBOutlet weak var bridgeWeightSwitch: UISwitch!
+    @IBOutlet weak var trafficLayerSwitch: UISwitch!
     @IBOutlet weak var destinationSwitch: UISwitch!
     @IBOutlet weak var partsSwitch: UISwitch!
     @IBOutlet weak var homeCircleSwitch: UISwitch!
@@ -40,6 +41,7 @@ class SettingsViewController: UIViewController {
         /***
         let isShowHeight = defaults.object(forKey: "displayHeight") as? Bool
         let isShowWeight = defaults.object(forKey: "displayWeight") as? Bool  ***/
+        let isShowTrafficLayer = defaults.object(forKey: "trafficLayer") as? Bool
         let isShowDestination = defaults.object(forKey: "displayDestination") as? Bool
         let isShowParts = defaults.object(forKey: "displayParts") as? Bool
         let isShowHomeCircle = defaults.object(forKey: "displayHomeCircle") as? Bool
@@ -70,6 +72,12 @@ class SettingsViewController: UIViewController {
         }
         else { bridgeWeightSwitch.setOn(true, animated: true) }   // default on
         ***/
+        
+        if let showTraffic = isShowTrafficLayer
+        {
+            trafficLayerSwitch.setOn(showTraffic, animated: true)
+        }
+        else { destinationSwitch.setOn(false, animated: true) }   // default off
         
         if let showDest = isShowDestination
         {
@@ -120,6 +128,7 @@ class SettingsViewController: UIViewController {
         /***
         defaults.set(bridgeHeightSwitch.isOn, forKey: "displayHeight")
         defaults.set(bridgeWeightSwitch.isOn, forKey: "displayWeight")  ***/
+        defaults.set(trafficLayerSwitch.isOn, forKey: "trafficLayer")
         defaults.set(destinationSwitch.isOn, forKey: "displayDestination")
         defaults.set(partsSwitch.isOn, forKey: "displayParts")
         defaults.set(homeCircleSwitch.isOn, forKey: "displayHomeCircle")

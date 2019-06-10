@@ -47,6 +47,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     var isShowHeight = true
     var isShowWeight = true
+    var isShowTraffic = false
     var isShowDestination = true
     var isShowParts = true
     var isShowHomeCircle = true
@@ -81,6 +82,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             longitude: geographicCenterUSLon, zoom: 6)
      
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+       // mapView.mapType = .hybrid
+        mapView.isTrafficEnabled = true
+        
         mapView.delegate = self
         self.view = mapView
         
@@ -96,6 +100,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         let distance :Int? = defaults.object(forKey: "distance") as? Int
         let isHeight = defaults.object(forKey: "displayHeight") as? Bool
         let isWeight = defaults.object(forKey: "displayWeight") as? Bool
+        let isTraffic = defaults.object(forKey: "trafficLayer") as? Bool
         let isDestination = defaults.object(forKey: "displayDestination") as? Bool
         let isParts = defaults.object(forKey: "displayParts") as? Bool
         let isHomeCircle = defaults.object(forKey: "displayHomeCircle") as? Bool
@@ -116,6 +121,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             isShowWeight = showWeight
         }
         else { isShowWeight = true }   // default on
+        
+        if let showTraffic = isTraffic
+        {
+            mapView.isTrafficEnabled = showTraffic
+        }
+        else { mapView.isTrafficEnabled = false }   // default false
         
         if let showDest = isDestination
         {

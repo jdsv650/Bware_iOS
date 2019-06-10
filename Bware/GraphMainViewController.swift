@@ -180,8 +180,8 @@ class GraphMainViewController: UIViewController {
         chart!.data = data
      
         // create and place chart descrioption
-        chart!.chartDescription?.enabled = false
-        chart!.chartDescription?.text = "Top 5"
+        chart!.chartDescription?.enabled = true
+        chart!.chartDescription?.text = "Number of Bridges Located"
         chart!.chartDescription?.textAlign = .center
         chart!.chartDescription?.textColor = UIColor.black
         chart!.chartDescription?.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
