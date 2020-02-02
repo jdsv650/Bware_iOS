@@ -83,10 +83,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
      
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
        // mapView.mapType = .hybrid
-        
         mapView.delegate = self
         self.view = mapView
-        
+
         errorLabel = setupErrorLabelUI(view: self.view)
         setupRefreshUI(view: self.view)
         setupActivityIndicatorUI(view: self.view)
@@ -287,10 +286,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
                 Helper.showUserMessage(title: "GPS not on or access restricted", theMessage: "Please allow location access to track vehicle location", theViewController: self)
                 return false
             case .authorizedAlways:
-                Helper.showUserMessage(title: "GPS not on or access restricted", theMessage: "Please allow location access to track vehicle location", theViewController: self)
-                return false
+                print("Access OK")
+                // show blue dot for loc and button
+                mapView.isMyLocationEnabled = true
+                mapView.settings.myLocationButton = true
+                isOkToUseLocation = true
+                locationManager.startUpdatingLocation()
+                return true
             case .authorizedWhenInUse:
                 print("Access OK")
+                // show blue dot for loc and button
+                mapView.isMyLocationEnabled = true
+                mapView.settings.myLocationButton = true
+                isOkToUseLocation = true
                 locationManager.startUpdatingLocation()
                 return true
             @unknown default:

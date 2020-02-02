@@ -287,23 +287,25 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
         if lat != nil { newBridge.latitude = lat! }
         else
         {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please try again", theViewController: self)
+            Helper.showUserMessage(title: "Error Creating Bridge: Latitude Missing", theMessage: "Please try again", theViewController: self)
             return
         }
         if lon != nil { newBridge.longitude = lon! }
         else
         {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please try again", theViewController: self)
+            Helper.showUserMessage(title: "Error Creating Bridge: Longitude Missing", theMessage: "Please try again", theViewController: self)
             return
         }
         
+        // check for at least one restriction provided by user before creating new bridge
         if weightStraightTF.text == "" && weightTriAxle.text == "" && weightDoubleTF.text == "" && weightComboTF.text == "" &&
            heightTF.text == "" && otherPostingTF.text == "" && isRSwitch.isOn == false
         {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply weight, height, other posting or set R posted switch", theViewController: self)
+            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply at least one restriction: Set weight, height, other posting or toggle R posted switch on", theViewController: self)
             return
         }
         
+        // load bridge with textfield values
         let weightS = (weightStraightTF.text! as NSString)
         newBridge.weightStraight = weightS.doubleValue // returns 0.0 if invalid
         let weightT = (weightTriAxle.text! as NSString)
@@ -318,40 +320,61 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
         newBridge.isRPosted = isRSwitch.isOn
         newBridge.otherPosting = otherPostingTF.text
         
+        // back to nil if 0.0
         if (newBridge.weightStraight == 0.0) { newBridge.weightStraight = nil }
         if (newBridge.weightStraight_TriAxle == 0.0) { newBridge.weightStraight_TriAxle = nil }
         if (newBridge.weightDouble == 0.0) { newBridge.weightDouble = nil }
         if (newBridge.weightCombo == 0.0) { newBridge.weightCombo = nil }
         if (newBridge.height == 0.0) { newBridge.height = nil }
-
-     
-        if otherPostingTF.text == "" && isRSwitch.isOn == false && newBridge.weightStraight == nil && newBridge.weightStraight_TriAxle == nil && newBridge.weightDouble == nil && newBridge.weightCombo == nil && newBridge.height == nil
-        {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please verify valid values were supplied for weight or height", theViewController: self)
-            return
-        }
         
         print("isR == \(isRSwitch.isOn)")
         
-        if newBridge.weightStraight == nil || newBridge.weightStraight_TriAxle == nil
-            || newBridge.weightDouble == nil || newBridge.weightCombo == nil
-            || newBridge.height == nil
+        // check for reasonable values
+        if let weightStraight = newBridge.weightStraight
         {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please verify valid values were supplied for weight or height", theViewController: self)
-            return
+            if weightStraight < 0 || weightStraight > 200
+            {
+                Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply a reasonable value for Straight Tandem field", theViewController: self)
+                return
+            }
         }
         
-        if otherPostingTF.text! == "" && isRSwitch.isOn == false &&
-           (newBridge.weightStraight! < 0 || newBridge.weightStraight! > 100 ||
-            newBridge.weightStraight_TriAxle! < 0 || newBridge.weightStraight_TriAxle! > 100 ||
-            newBridge.weightDouble! < 0 || newBridge.weightDouble! > 100    ||
-            newBridge.weightCombo! < 0 || newBridge.weightCombo! > 100 ||
-            newBridge.height! < 0 || newBridge.height! > 22)
+        if let weightTri = newBridge.weightStraight_TriAxle
         {
-            Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply reasonable values for weight or height", theViewController: self)
-            return
+            if weightTri < 0 || weightTri > 200
+            {
+                Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply a reasonable value for Straight Tri-Axle field", theViewController: self)
+                return
+            }
         }
         
+        if let weightCombo = newBridge.weightCombo
+        {
+            if weightCombo < 0 || weightCombo > 200
+            {
+                Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply a reasonable value for Combination field", theViewController: self)
+                return
+            }
+        }
+        
+        if let weightDouble = newBridge.weightDouble
+        {
+            if weightDouble < 0 || weightDouble > 200
+            {
+                Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply a reasonable value for Double field", theViewController: self)
+                return
+            }
+        }
+        
+        if let height = newBridge.height
+        {
+            if height < 0 || height > 32
+            {
+                Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply a reasonable value for Height field", theViewController: self)
+                return
+            }
+        }
+               
         if CountryTF.text == "" || stateTF.text == "" || countyTF.text == ""
         {
             Helper.showUserMessage(title: "Error Creating Bridge", theMessage: "Please supply country, state and county", theViewController: self)

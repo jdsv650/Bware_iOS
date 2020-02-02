@@ -134,8 +134,8 @@
 		1AF7F4581B4851F800211563 /* mack_lego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mack_lego.png; sourceTree = "<group>"; };
 		1AFBBE1D1B96919C00E95F09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1AFBBE1F1B9691B500E95F09 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		761AD01F83C5380B6F2C6CE5 /* Pods-Bware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bware.debug.xcconfig"; path = "Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware.debug.xcconfig"; sourceTree = "<group>"; };
-		931DB70F94527AB87121EB7D /* Pods-Bware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bware.release.xcconfig"; path = "Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware.release.xcconfig"; sourceTree = "<group>"; };
+		761AD01F83C5380B6F2C6CE5 /* Pods-Bware.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bware.debug.xcconfig"; path = "../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware.debug.xcconfig"; sourceTree = "<group>"; };
+		931DB70F94527AB87121EB7D /* Pods-Bware.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bware.release.xcconfig"; path = "../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware.release.xcconfig"; sourceTree = "<group>"; };
 		ABAAA1EAF42E299BAEAA58DA /* Pods_Bware.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bware.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -406,7 +406,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bware/Pods-Bware-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
@@ -417,7 +417,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bware/Pods-Bware-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		33AB9D6D7B17604C362E1AA4 /* [CP] Embed Pods Frameworks */ = {
@@ -426,7 +426,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bware/Pods-Bware-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BFPaperButton/BFPaperButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
@@ -451,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/Pods/Target Support Files/Pods-Bware/Pods-Bware-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bware/Pods-Bware-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D70FF7550B7823F1442741EA /* [CP] Check Pods Manifest.lock */ = {
@@ -639,7 +639,7 @@
 			baseConfigurationReference = 761AD01F83C5380B6F2C6CE5 /* Pods-Bware.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -668,7 +668,7 @@
 			baseConfigurationReference = 931DB70F94527AB87121EB7D /* Pods-Bware.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
