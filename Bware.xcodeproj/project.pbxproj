@@ -19,6 +19,7 @@
 		1A500CB822AC6D17009C22EA /* AxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A500CB722AC6D17009C22EA /* AxisValueFormatter.swift */; };
 		1A60F42D1BF2C00F007E0F3C /* graphIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A60F42C1BF2C00F007E0F3C /* graphIcon.png */; };
 		1A60F42F1BF2C16E007E0F3C /* GraphMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F42E1BF2C16E007E0F3C /* GraphMainViewController.swift */; };
+		1A6A455723E7607600BFFA86 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A455623E7607600BFFA86 /* DetailTableViewController.swift */; };
 		1A6E986A1BBA662700185A5C /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6E98691BBA662700185A5C /* EditTableViewController.swift */; };
 		1A71C9B01DBC3C27001D2145 /* stop_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A71C9AF1DBC3C27001D2145 /* stop_transparent.png */; };
 		1A71C9B21DBC714C001D2145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A71C9B11DBC714C001D2145 /* LaunchScreen.storyboard */; };
@@ -50,7 +51,6 @@
 		1AE54AAD1FFDC16300450CCC /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE54AAC1FFDC16300450CCC /* Destination.swift */; };
 		1AE54AAF1FFDDA8A00450CCC /* DetailDestinationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE54AAE1FFDDA8A00450CCC /* DetailDestinationTableViewController.swift */; };
 		1AE71EA81DD90C0D007EA972 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AE71EA71DD90C0D007EA972 /* Keys.plist */; };
-		1AEED2E81DD9579E006CF26C /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEED2E71DD9579E006CF26C /* DetailTableViewController.swift */; };
 		1AF1DB4C1B5321CC00140335 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1DB4B1B5321CB00140335 /* Constant.swift */; };
 		1AF1DB501B534F6400140335 /* backArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1DB4F1B534F6400140335 /* backArrow.png */; };
 		1AF2191D1FFE8DA100CF42AE /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF2191C1FFE8DA100CF42AE /* phone.png */; };
@@ -81,6 +81,7 @@
 		1A500CB722AC6D17009C22EA /* AxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxisValueFormatter.swift; path = ../../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/AxisValueFormatter.swift; sourceTree = "<group>"; };
 		1A60F42C1BF2C00F007E0F3C /* graphIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graphIcon.png; path = ../graphIcon.png; sourceTree = "<group>"; };
 		1A60F42E1BF2C16E007E0F3C /* GraphMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphMainViewController.swift; sourceTree = "<group>"; };
+		1A6A455623E7607600BFFA86 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		1A6E98691BBA662700185A5C /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		1A71C9AF1DBC3C27001D2145 /* stop_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_transparent.png; sourceTree = "<group>"; };
 		1A71C9B11DBC714C001D2145 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,8 +118,6 @@
 		1AE54AAE1FFDDA8A00450CCC /* DetailDestinationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDestinationTableViewController.swift; sourceTree = "<group>"; };
 		1AE71EA71DD90C0D007EA972 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		1AE71EAD1DD914A6007EA972 /* Bware-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bware-Bridging-Header.h"; sourceTree = "<group>"; };
-		1AEED2E71DD9579E006CF26C /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
-		1AEFE7F31B7081FA0026BAA8 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		1AF1DB4B1B5321CB00140335 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1AF1DB4F1B534F6400140335 /* backArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow.png; sourceTree = "<group>"; };
 		1AF2191C1FFE8DA100CF42AE /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
@@ -156,14 +155,13 @@
 		1A45F7B51C51B5D600C2C3FB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A6A455623E7607600BFFA86 /* DetailTableViewController.swift */,
 				1A7DD1551B471BE0005F87FA /* LoginViewController.swift */,
 				1AF7F4561B484C5E00211563 /* WelcomeViewController.swift */,
 				1A7DD1571B471BF5005F87FA /* SignupViewController.swift */,
 				1AAE51B11B49F22E00956873 /* SettingsViewController.swift */,
 				1A04E5D51B48D5C60097A22C /* MapViewController.swift */,
 				1AF45D5B1B596BFD00A0A298 /* CreateBridgeViewController.swift */,
-				1AEFE7F31B7081FA0026BAA8 /* DetailTableViewController.swift */,
-				1AEED2E71DD9579E006CF26C /* DetailTableViewController.swift */,
 				1A6E98691BBA662700185A5C /* EditTableViewController.swift */,
 				1AD0A4FA1B8D341D006C4354 /* SearchTableViewController.swift */,
 				1AD0A4FC1B8D4324006C4354 /* StateTableViewController.swift */,
@@ -479,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AEED2E81DD9579E006CF26C /* DetailTableViewController.swift in Sources */,
 				1AE54AAF1FFDDA8A00450CCC /* DetailDestinationTableViewController.swift in Sources */,
 				1A88F280200297270044944D /* BridgeRealm.swift in Sources */,
 				1A7DD1561B471BE0005F87FA /* LoginViewController.swift in Sources */,
@@ -496,6 +493,7 @@
 				1AB519C21B47129900BF7E01 /* AppDelegate.swift in Sources */,
 				1AE54AAD1FFDC16300450CCC /* Destination.swift in Sources */,
 				1AD0A4FD1B8D4324006C4354 /* StateTableViewController.swift in Sources */,
+				1A6A455723E7607600BFFA86 /* DetailTableViewController.swift in Sources */,
 				1AF45D5C1B596BFD00A0A298 /* CreateBridgeViewController.swift in Sources */,
 				1AF1DB4C1B5321CC00140335 /* Constant.swift in Sources */,
 				1A88F27E2001D6580044944D /* DetailPartsLocationTableViewController.swift in Sources */,

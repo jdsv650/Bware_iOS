@@ -260,7 +260,7 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
                             else // success
                             {    // ok display message
                                 print("BRIDGE ADDED")
-                                self.userMessage(title: "Bridge Saved", theMessage: "Create successful", theViewController: self)
+                                self.userMessage(title: "Bridge Saved", theMessage: "Create successful - refresh bridge data to see changes", theViewController: self)
                             }
                         }
                             

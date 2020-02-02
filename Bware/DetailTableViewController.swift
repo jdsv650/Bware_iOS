@@ -570,7 +570,8 @@ class DetailTableViewController: UITableViewController {
                             }
                             else // success
                             {
-                                 Helper.showUserMessage(title: "Remove Successful", theMessage: "Bridge marked as inactive", theViewController: self)
+                                self.deleteUserMessage(title: "Remove Successful", theMessage: "Bridge marked as inactive - refresh bridge data to see changes", theViewController: self)
+                                 //Helper.showUserMessage(title: , theMessage: "Bridge marked as inactive - refresh bridge data to see changes", theViewController: self)
                             }
                         }
                         else
@@ -597,6 +598,21 @@ class DetailTableViewController: UITableViewController {
         }
         
     }
+    
+    
+     @objc func deleteUserMessage(title: String, theMessage: String, theViewController: UIViewController)
+     {
+         let alert = UIAlertController(title: title, message: theMessage, preferredStyle: UIAlertController.Style.actionSheet)
+         
+        let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { Void in
+            if let navController = self.navigationController {
+                navController.popViewController(animated: true)
+            }
+        })
+    
+         alert.addAction(action)
+         theViewController.present(alert, animated: true, completion: nil)
+     }
     
     
  
