@@ -33,7 +33,6 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var carriedTF: UITextField!
     @IBOutlet weak var crossedTF: UITextField!
     
-    var newBridge = Bridge()
     @objc var weightStraight: String?
     @objc var weightCombo: String?
     @objc var weightDouble: String?
@@ -201,7 +200,7 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
             mutableURLRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             mutableURLRequest.httpMethod =  HTTPMethod.post.rawValue
             
-            let encoding = URLEncoding.queryString
+            let encoding = JSONEncoding.default
             
             do
             {
@@ -284,6 +283,8 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func savePressed(sender: UIBarButtonItem)
     {
+        let newBridge = Bridge()
+        
         if lat != nil { newBridge.latitude = lat! }
         else
         {
