@@ -138,7 +138,7 @@ class DetailTableViewController: UITableViewController {
                 print("Error")
             }
             
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
 
             myRequest.responseJSON(queue: DispatchQueue.global(qos: .default), options: JSONSerialization.ReadingOptions.mutableContainers)
@@ -327,7 +327,7 @@ class DetailTableViewController: UITableViewController {
             
            // let encoding = URLEncoding.queryString
             
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
 
             
@@ -520,7 +520,7 @@ class DetailTableViewController: UITableViewController {
             mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             mutableURLRequest.httpMethod = HTTPMethod.post.rawValue
             
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
             
             myRequest.responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers)

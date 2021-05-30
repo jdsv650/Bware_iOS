@@ -46,7 +46,7 @@ class DetailDestinationTableViewController: UITableViewController {
         if let dest = theDestination
         {
             if let url = URL(string: "tel://\(dest.phone1)") {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
             else
             {
@@ -65,7 +65,7 @@ class DetailDestinationTableViewController: UITableViewController {
         if let dest = theDestination
         {
             if let url = URL(string: "tel://\(dest.phone2)") {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
             else
             {

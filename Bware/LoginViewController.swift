@@ -123,7 +123,7 @@ class LoginViewController: UIViewController {
             print("Error")
         }
         
-        let manager = SessionManager.default
+        let manager = Session.default
         let myRequest = manager.request(mutableURLRequest)
         
         myRequest.responseJSON(queue: DispatchQueue.global(qos: .default), options: JSONSerialization.ReadingOptions.mutableContainers)
@@ -224,7 +224,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        let manager = SessionManager.default
+        let manager = Session.default
         let myRequest = manager.request(mutableURLRequest)
         
         activityIndicator.isHidden = false

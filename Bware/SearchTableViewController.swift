@@ -148,7 +148,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
             mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             mutableURLRequest.httpMethod = HTTPMethod.get.rawValue
                 
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
             
             myRequest.responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers)

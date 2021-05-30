@@ -1,6 +1,6 @@
 project '/Users/James/Desktop/xcode10Projects/Bware_ios/Bware.xcodeproj'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 target "Bware" do
 	pod 'Alamofire'
 	pod 'Flurry-iOS-SDK/FlurrySDK'

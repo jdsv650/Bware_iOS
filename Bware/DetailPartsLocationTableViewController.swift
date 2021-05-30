@@ -49,7 +49,7 @@ class DetailPartsLocationTableViewController: UITableViewController
         if let dest = thePartsLoc
         {
             if let url = URL(string: "tel://\(dest.phone)") {
-                UIApplication.shared.openURL(url)
+                UIApplication.shared.open(url)
             }
             else
             {

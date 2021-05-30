@@ -211,7 +211,7 @@ class CreateBridgeViewController: UITableViewController, UITextFieldDelegate {
                 print("Error")
             }
             
-            let manager = SessionManager.default
+            let manager = Session.default
             
             manager.request(mutableURLRequest).responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers)
                 { (Response) in

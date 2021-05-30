@@ -491,7 +491,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
                 activityIndicator.stopAnimating()
             }
             
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
         
             // let flurryData = ["event": "getBridgeData api call"];

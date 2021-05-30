@@ -59,7 +59,7 @@ class GraphMainViewController: UIViewController {
             
           //  let encoding = URLEncoding.queryString
             
-            let manager = SessionManager.default
+            let manager = Session.default
             let myRequest = manager.request(mutableURLRequest)
             
             myRequest.responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers)
