@@ -52,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  
         // Initialize Google sign-in
         var configureError: NSError?
+        // gives UI API called from background thread warning
         GGLContext.sharedInstance().configureWithError(&configureError)
         
         if configureError == nil
