@@ -115,9 +115,9 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-   
-    @IBAction func searchPressed(sender: UIBarButtonItem)
-    {
+    
+    @IBAction func searchPressed(_ sender: UIButton) {
+        
         theToken = Helper.getTokenLocal()
         
         var urlAsString = "\(Constants.baseUrlAsString)/api/Bridge/GetByInfo"
@@ -236,7 +236,12 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         }
         
         
+        
+        
     }
+    
+   
+  
     
     @objc func handleTap(tap: UIGestureRecognizer) { view.endEditing(true) }
 
