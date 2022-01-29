@@ -24,12 +24,11 @@ class BridgeRealm : Object
     @objc dynamic var longitude: Double = -99
     
    // var weightStraight: Double?
-    var weightStraight = RealmOptional<Double>()
-    
-    var weightStraight_TriAxle = RealmOptional<Double>()
-    var weightCombo = RealmOptional<Double>()
-    var weightDouble = RealmOptional<Double>()
-    var height = RealmOptional<Double>()
+    var weightStraight = RealmProperty<Double?>()
+    var weightStraight_TriAxle = RealmProperty<Double?>()
+    var weightCombo = RealmProperty<Double?>()
+    var weightDouble = RealmProperty<Double?>()
+    var height = RealmProperty<Double?>()
     
     @objc dynamic var locationDescription: String?
    
@@ -42,9 +41,9 @@ class BridgeRealm : Object
     @objc dynamic var county: String?
     @objc dynamic var otherPosting: String?
     
-    var numVotes = RealmOptional<Int>()    // 0
-    var isLocked = RealmOptional<Bool>()   // = true
-    var isRPosted = RealmOptional<Bool>() // = false
+    var numVotes = RealmProperty<Int?>()    // 0
+    var isLocked = RealmProperty<Bool?>()  // = true
+    var isRPosted = RealmProperty<Bool?>() // = false
     
 
 }

@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.2)
   - BFPaperButton (2.1.2)
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
@@ -12,17 +12,17 @@ PODS:
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (1.0.10):
     - FirebaseCore (~> 3.6)
-  - Flurry-iOS-SDK/FlurrySDK (11.2.1)
+  - Flurry-iOS-SDK/FlurrySDK (11.4.0)
   - Google/Core (3.1.0):
     - FirebaseAnalytics (~> 3.2)
   - Google/SignIn (3.1.0):
     - Google/Core
     - GoogleSignIn (~> 4.0)
-  - GoogleAPIClientForREST/Core (1.5.2):
-    - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Drive (1.5.2):
+  - GoogleAPIClientForREST/Core (1.6.0):
+    - GTMSessionFetcher (>= 1.6.1)
+  - GoogleAPIClientForREST/Drive (1.6.0):
     - GoogleAPIClientForREST/Core
-    - GTMSessionFetcher (>= 1.1.7)
+    - GTMSessionFetcher (>= 1.6.1)
   - GoogleMaps (4.2.0):
     - GoogleMaps/Maps (= 4.2.0)
   - GoogleMaps/Base (4.2.0)
@@ -32,29 +32,29 @@ PODS:
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
-  - GoogleToolboxForMac/DebugUtils (2.3.1):
-    - GoogleToolboxForMac/Defines (= 2.3.1)
-  - GoogleToolboxForMac/Defines (2.3.1)
-  - "GoogleToolboxForMac/NSData+zlib (2.3.1)":
-    - GoogleToolboxForMac/Defines (= 2.3.1)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.1)":
-    - GoogleToolboxForMac/DebugUtils (= 2.3.1)
-    - GoogleToolboxForMac/Defines (= 2.3.1)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.1)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.3.1)"
-  - GTMSessionFetcher (1.5.0):
-    - GTMSessionFetcher/Full (= 1.5.0)
-  - GTMSessionFetcher/Core (1.5.0)
-  - GTMSessionFetcher/Full (1.5.0):
-    - GTMSessionFetcher/Core (= 1.5.0)
-  - Realm (10.7.6):
-    - Realm/Headers (= 10.7.6)
-  - Realm/Headers (10.7.6)
-  - RealmSwift (10.7.6):
-    - Realm (= 10.7.6)
+  - GoogleToolboxForMac/DebugUtils (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - GoogleToolboxForMac/Defines (2.3.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.2)":
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.2)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.2)
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.2)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.2)"
+  - GTMSessionFetcher (1.7.0):
+    - GTMSessionFetcher/Full (= 1.7.0)
+  - GTMSessionFetcher/Core (1.7.0)
+  - GTMSessionFetcher/Full (1.7.0):
+    - GTMSessionFetcher/Core (= 1.7.0)
+  - Realm (10.22.0):
+    - Realm/Headers (= 10.22.0)
+  - Realm/Headers (10.22.0)
+  - RealmSwift (10.22.0):
+    - Realm (= 10.22.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (< 5.4.3)
   - BFPaperButton
   - Charts
   - Flurry-iOS-SDK/FlurrySDK
@@ -82,22 +82,22 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   BFPaperButton: a25fdd3ff6898bdbd5cc9b1334ca36adb0296b9f
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
-  Flurry-iOS-SDK: 5831da8fc6bedb31fa1f94aac6fd204d36dd351d
+  Flurry-iOS-SDK: a1dbf099040d71e89a11cdf3a30c8723c1de950f
   Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
-  GoogleAPIClientForREST: 538a8ad0014fd88b78894e77100775a6b0a4f7ed
+  GoogleAPIClientForREST: 5183df28e7bcb7b7b41ebd558e16083cfed60d99
   GoogleMaps: eb03e327edfd70b06de1e6e321653f73712df7ad
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
-  GoogleToolboxForMac: 471e0c05d39506e50e6398f46fa9a12ae0efeff9
-  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
-  RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
+  GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  Realm: d9e4e5877095a6722145811f56fe89a531c9659d
+  RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
 
-PODFILE CHECKSUM: 437511d521b3f4beba8271e723198d66dc5fdcb7
+PODFILE CHECKSUM: 21940c5cb1caebef97a08317f7a0da3ed8526547
 
 COCOAPODS: 1.10.0
