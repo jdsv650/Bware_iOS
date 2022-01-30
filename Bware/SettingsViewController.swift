@@ -138,11 +138,35 @@ class SettingsViewController: UIViewController {
         Helper.showUserMessage(title: "Settings Saved", theMessage: "Please tap refresh button if you wish to reload data", theViewController: self)
     }
     
-    @IBAction func backupLocalPressed(_ sender: BFPaperButton) {
+    @IBAction func backupLocalPressed(_ sender: BFPaperButton) { }
+
+    
+    @IBAction func deleteUserPressed(_ sender: UIBarButtonItem) {
         
+        deleteUserAlert("Delete User", theMessage: "Remove User and Logout?")
+    }
+    
+    func deleteUserAlert(_ title: String, theMessage: String)
+       {
+           let alert = UIAlertController(title: title, message: theMessage, preferredStyle: UIAlertController.Style.alert)
+           
+           
+           let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in self.deleteUser() }
+           )
+           alert.addAction(action)
+           
+           let cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+           alert.addAction(cancel)
+           
+           self.present(alert, animated: true, completion: nil)
+       }
+       
+
+    func deleteUser()
+    {
         
     }
     
     
-
+    
 }

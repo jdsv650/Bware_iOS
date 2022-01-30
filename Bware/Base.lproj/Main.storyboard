@@ -479,11 +479,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="KRa-Rz-RYr">
-                        <barButtonItem key="rightBarButtonItem" image="dot-more-7.png" id="p9u-R7-GsA">
-                            <connections>
-                                <segue destination="1GM-Cu-8Rh" kind="push" id="Uuz-gQ-Z6C"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="dot-more-7.png" id="p9u-R7-GsA">
+                                <connections>
+                                    <segue destination="1GM-Cu-8Rh" kind="push" id="Uuz-gQ-Z6C"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="icons8-delete_user_male.png" id="llQ-VM-KSl">
+                                <connections>
+                                    <action selector="deleteUserPressed:" destination="2J6-Xx-EkG" id="wuu-WO-Rvl"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="destinationSwitch" destination="ZVT-aL-k8H" id="xBd-IW-bfg"/>
@@ -3448,6 +3455,7 @@
         <image name="cabin.png" width="32" height="37"/>
         <image name="dot-more-7.png" width="30" height="30"/>
         <image name="graphIcon.png" width="20" height="20"/>
+        <image name="icons8-delete_user_male.png" width="25" height="25"/>
         <image name="internet.png" width="32" height="32"/>
         <image name="list-fat-7.png" width="30" height="30"/>
         <image name="mack_lego.png" width="288" height="152"/>

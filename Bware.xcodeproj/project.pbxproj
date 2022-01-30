@@ -18,6 +18,8 @@
 		1A43E5091D31757E00BD42F1 /* box-outgoing-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A43E5081D31757E00BD42F1 /* box-outgoing-7.png */; };
 		1A4CCD1B27A5D2A200693FA7 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CCD1A27A5D2A200693FA7 /* SearchTableViewController.swift */; };
 		1A4D4DA81B9A62A0004F5203 /* question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D4DA71B9A62A0004F5203 /* question_mark.png */; };
+		1A4FC53427A62B0600F0A325 /* icons8-delete_user_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A4FC53327A62B0600F0A325 /* icons8-delete_user_male.png */; };
+		1A4FC53627A62C5600F0A325 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FC53527A62C5600F0A325 /* SettingsViewController.swift */; };
 		1A500CB822AC6D17009C22EA /* AxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A500CB722AC6D17009C22EA /* AxisValueFormatter.swift */; };
 		1A60F42D1BF2C00F007E0F3C /* graphIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A60F42C1BF2C00F007E0F3C /* graphIcon.png */; };
 		1A60F42F1BF2C16E007E0F3C /* GraphMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A60F42E1BF2C16E007E0F3C /* GraphMainViewController.swift */; };
@@ -34,7 +36,6 @@
 		1A88F27E2001D6580044944D /* DetailPartsLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88F27D2001D6580044944D /* DetailPartsLocationTableViewController.swift */; };
 		1A88F280200297270044944D /* BridgeRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88F27F200297270044944D /* BridgeRealm.swift */; };
 		1A8EB9852004517100603EEA /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A8EB9842004517100603EEA /* refresh.png */; };
-		1AAE51B21B49F22E00956873 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE51B11B49F22E00956873 /* SettingsViewController.swift */; };
 		1AAE51B41B49F54D00956873 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAE51B31B49F54D00956873 /* AboutViewController.swift */; };
 		1AB519C21B47129900BF7E01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB519C11B47129900BF7E01 /* AppDelegate.swift */; };
 		1AB519C91B47129900BF7E01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB519C81B47129900BF7E01 /* Images.xcassets */; };
@@ -80,6 +81,8 @@
 		1A43E50A1D31790F00BD42F1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1A4CCD1A27A5D2A200693FA7 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ../../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/SearchTableViewController.swift; sourceTree = "<group>"; };
 		1A4D4DA71B9A62A0004F5203 /* question_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = question_mark.png; sourceTree = "<group>"; };
+		1A4FC53327A62B0600F0A325 /* icons8-delete_user_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-delete_user_male.png"; sourceTree = "<group>"; };
+		1A4FC53527A62C5600F0A325 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/SettingsViewController.swift; sourceTree = "<group>"; };
 		1A500CB722AC6D17009C22EA /* AxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AxisValueFormatter.swift; path = ../../../../../james/Desktop/xcode10Projects/Bware_iOS/Bware/AxisValueFormatter.swift; sourceTree = "<group>"; };
 		1A60F42C1BF2C00F007E0F3C /* graphIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graphIcon.png; path = ../graphIcon.png; sourceTree = "<group>"; };
 		1A60F42E1BF2C16E007E0F3C /* GraphMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphMainViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		1A88F27D2001D6580044944D /* DetailPartsLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPartsLocationTableViewController.swift; sourceTree = "<group>"; };
 		1A88F27F200297270044944D /* BridgeRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeRealm.swift; sourceTree = "<group>"; };
 		1A8EB9842004517100603EEA /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
-		1AAE51B11B49F22E00956873 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1AAE51B31B49F54D00956873 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		1AB519BC1B47129900BF7E01 /* Bware.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bware.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB519C01B47129900BF7E01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,12 +157,12 @@
 		1A45F7B51C51B5D600C2C3FB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A4FC53527A62C5600F0A325 /* SettingsViewController.swift */,
 				1A4CCD1A27A5D2A200693FA7 /* SearchTableViewController.swift */,
 				1A6A455623E7607600BFFA86 /* DetailTableViewController.swift */,
 				1A7DD1551B471BE0005F87FA /* LoginViewController.swift */,
 				1AF7F4561B484C5E00211563 /* WelcomeViewController.swift */,
 				1A7DD1571B471BF5005F87FA /* SignupViewController.swift */,
-				1AAE51B11B49F22E00956873 /* SettingsViewController.swift */,
 				1A04E5D51B48D5C60097A22C /* MapViewController.swift */,
 				1AF45D5B1B596BFD00A0A298 /* CreateBridgeViewController.swift */,
 				1A6E98691BBA662700185A5C /* EditTableViewController.swift */,
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				1AF219282000558200CF42AE /* repair.png */,
+				1A4FC53327A62B0600F0A325 /* icons8-delete_user_male.png */,
 				1A8EB9842004517100603EEA /* refresh.png */,
 				1AF2191E1FFE8DA700CF42AE /* internet.png */,
 				1AF2192C20013DED00CF42AE /* cabin.png */,
@@ -375,6 +378,7 @@
 				1A71C9B01DBC3C27001D2145 /* stop_transparent.png in Resources */,
 				1A28A9381BEB3C5100CB8C30 /* marker_weight2_orange.png in Resources */,
 				1A60F42D1BF2C00F007E0F3C /* graphIcon.png in Resources */,
+				1A4FC53427A62B0600F0A325 /* icons8-delete_user_male.png in Resources */,
 				1AB519E21B4713B500BF7E01 /* Podfile in Resources */,
 				1AF219251FFEA3E200CF42AE /* marker_destination2.png in Resources */,
 				1AE71EA81DD90C0D007EA972 /* Keys.plist in Resources */,
@@ -497,6 +501,7 @@
 				1AF45D5C1B596BFD00A0A298 /* CreateBridgeViewController.swift in Sources */,
 				1AF1DB4C1B5321CC00140335 /* Constant.swift in Sources */,
 				1A88F27E2001D6580044944D /* DetailPartsLocationTableViewController.swift in Sources */,
+				1A4FC53627A62C5600F0A325 /* SettingsViewController.swift in Sources */,
 				1A28A93C1BEDEAD200CB8C30 /* CreateMessageViewController.swift in Sources */,
 				1A88F27A2001AF2C0044944D /* CreatePartLocationTableViewController.swift in Sources */,
 				1A04E5D61B48D5C60097A22C /* MapViewController.swift in Sources */,
@@ -505,7 +510,6 @@
 				1AF439F6202C9FFA00013E60 /* GoogleDriveViewController.swift in Sources */,
 				1A60F42F1BF2C16E007E0F3C /* GraphMainViewController.swift in Sources */,
 				1A8354CD1FFD882A00B5B297 /* CreateTableViewController.swift in Sources */,
-				1AAE51B21B49F22E00956873 /* SettingsViewController.swift in Sources */,
 				1A500CB822AC6D17009C22EA /* AxisValueFormatter.swift in Sources */,
 				1A4CCD1B27A5D2A200693FA7 /* SearchTableViewController.swift in Sources */,
 			);
