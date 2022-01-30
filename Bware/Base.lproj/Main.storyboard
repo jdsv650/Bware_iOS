@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1904,25 +1903,6 @@
             </objects>
             <point key="canvasLocation" x="4542.753623188406" y="-373.32589285714283"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="f0b-ot-bYU">
-            <objects>
-                <viewController id="F4g-ao-mjb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KOn-pM-uv7"/>
-                        <viewControllerLayoutGuide type="bottom" id="4s8-wQ-LYf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PNJ-Qj-ppD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iBj-1e-gBN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VEz-J3-N3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3644" y="-990"/>
-        </scene>
         <!--Bware-->
         <scene sceneID="Mur-q7-5ju">
             <objects>
@@ -1995,13 +1975,7 @@
                             <constraint firstItem="hlK-a0-UQl" firstAttribute="top" secondItem="96f-ow-5Er" secondAttribute="bottom" constant="13" id="yv6-Hf-Vei"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Bware" id="0Mo-N3-cZe">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="2lK-yD-iXt">
-                            <connections>
-                                <segue destination="F4g-ao-mjb" kind="push" id="Jfz-cS-13O"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Bware" id="0Mo-N3-cZe"/>
                     <connections>
                         <outlet property="loginButton" destination="96f-ow-5Er" id="DlX-Ab-Awj"/>
                         <outlet property="newUserButton" destination="hlK-a0-UQl" id="8rh-jM-7Ah"/>
@@ -3464,8 +3438,5 @@
         <image name="phone.png" width="32" height="32"/>
         <image name="repair.png" width="32" height="37"/>
         <image name="stop_transparent.png" width="113" height="100"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
