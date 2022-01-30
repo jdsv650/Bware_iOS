@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import BFPaperButton
+import Alamofire
 
 class SettingsViewController: UIViewController {
     
@@ -25,6 +26,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var destinationSwitch: UISwitch!
     @IBOutlet weak var partsSwitch: UISwitch!
     @IBOutlet weak var homeCircleSwitch: UISwitch!
+    
+    var theToken = Helper.getTokenLocal()
     
 
     override func viewDidLoad() {
@@ -59,20 +62,6 @@ class SettingsViewController: UIViewController {
             distanceFromSlider.value = Float(theDistance)
         }
         
-        /***
-        if let showHeight = isShowHeight
-        {
-            bridgeHeightSwitch.setOn(showHeight, animated: true)
-        }
-        else { bridgeHeightSwitch.setOn(true, animated: true) }   // default on
-        
-        if let showWeight = isShowWeight
-        {
-            bridgeWeightSwitch.setOn(showWeight, animated: true)
-        }
-        else { bridgeWeightSwitch.setOn(true, animated: true) }   // default on
-        ***/
-        
         if let showTraffic = isShowTrafficLayer
         {
             trafficLayerSwitch.setOn(showTraffic, animated: true)
@@ -102,6 +91,11 @@ class SettingsViewController: UIViewController {
    
     @IBAction func logoutPressed(sender: UIButton) {
         
+       logoutUser()
+    }
+    
+    func logoutUser()
+    {
         // clear saved info
         UserDefaults.standard.removeObject(forKey: ".expires")
         UserDefaults.standard.removeObject(forKey: "access_token")
@@ -148,7 +142,7 @@ class SettingsViewController: UIViewController {
     
     func deleteUserAlert(_ title: String, theMessage: String)
        {
-           let alert = UIAlertController(title: title, message: theMessage, preferredStyle: UIAlertController.Style.alert)
+           let alert = UIAlertController(title: title, message: theMessage, preferredStyle: UIAlertController.Style.actionSheet)
            
            
            let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in self.deleteUser() }
@@ -161,12 +155,132 @@ class SettingsViewController: UIViewController {
            self.present(alert, animated: true, completion: nil)
        }
        
-
+    
     func deleteUser()
     {
+        theToken = Helper.getTokenLocal()
+        
+        let urlAsString = "\(Constants.baseUrlAsString)\(Constants.siteName)/api/Account/DeleteUser"
+        
+        if let token = theToken.access_token
+        {
+            var userName = ""
+            
+            if theToken.theUserName != nil
+            {
+                userName = theToken.theUserName!
+            }
+            else {  print("User unknown")  }
+            
+            let params = ["user" : userName]
+            
+            let URL = NSURL(string: urlAsString)
+            var mutableURLRequest :URLRequest
+            
+            if URL != nil
+            {
+                 mutableURLRequest = URLRequest(url: URL! as URL)
+            }
+            else
+            {
+                print("URL Unknown")
+                return
+            }
+            
+            mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            mutableURLRequest.httpMethod =  HTTPMethod.delete.rawValue
+            mutableURLRequest.setValue("www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            let encoding = URLEncoding.queryString
+
+            do
+            {
+                try mutableURLRequest = encoding.encode(mutableURLRequest, with: params)
+                
+            } catch
+            {
+                print("Error encoding params")
+            }
+            
+            let manager = Session.default
+            let myRequest = manager.request(mutableURLRequest)
+            
+            myRequest.responseJSON(queue: DispatchQueue.global(qos: .default), options: JSONSerialization.ReadingOptions.mutableContainers)
+            { (Response) in
+                    
+                    print(Response.request as Any)
+                    print("")
+                    print(Response.response as Any)
+                    print("")
+                    print(Response.result)
+                    
+                    var resultAsJSON: NSDictionary
+                    
+                    if Response.response?.statusCode == 401  // unauthorized
+                    {
+                        print("Unauthorized -- Go To Login")
+                        Helper.sendToLogin(theViewController: self)
+                    }
+                    
+                    switch Response.result
+                    {
+                    case .success(let theData):
+                        resultAsJSON = theData as! NSDictionary
+                    case .failure(let error):
+                        print("Request failed with error: \(error)")
+                        Helper.showUserMessage(title: "Error Deleting User", theMessage: ErrorMessages.generic_network.rawValue, theViewController: self)
+                        return
+                    }
+                    
+                    if Response.response?.statusCode == 200 || Response.response?.statusCode == 204
+                    {
+                        print("Delete Account returned OK examine results for isSuccess and/or error message")
+                        if let success = resultAsJSON["isSuccess"] as? Bool
+                        {
+                            if success != true   // display error to user
+                            {
+                                if let message = resultAsJSON["message"] as? String
+                                {
+                                    Helper.showUserMessage(title: "Error Deleting User", theMessage: message, theViewController: self)
+                                }
+                                else
+                                {
+                                    Helper.showUserMessage(title: "Error Deleting User", theMessage: "Please Try Again", theViewController: self)
+                                }
+                            }
+                            else // account deleted - display message and logout
+                            {
+                                self.deletedUserSuccessAlert("Account Deleted Successfully", theMessage: "Deleted: " + userName)
+                            }
+                        }
+                    }
+                    else
+                    {
+                        print("Error deleting account")
+                        Helper.showUserMessage(title: "Error Deleting User", theMessage: "Please try again", theViewController: self)
+                    }
+            }
+        }
+        else
+        {
+            print("Not logged in go to Welcome VC")
+            Helper.sendToLogin(theViewController: self)
+        }
         
     }
     
-    
+    func deletedUserSuccessAlert(_ title: String, theMessage: String)
+       {
+           DispatchQueue.main.async
+           {
+               let alert = UIAlertController(title: title, message: theMessage, preferredStyle: UIAlertController.Style.actionSheet)
+           
+               let action = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in self.logoutUser() }
+               )
+               alert.addAction(action)
+           
+               self.present(alert, animated: true, completion: nil)
+           }
+       }
+       
     
 }
