@@ -4,7 +4,6 @@
 //
 //  Created by James on 7/17/15.
 //  Copyright (c) 2015 James. All rights reserved.
-//
 
 import Foundation
 
