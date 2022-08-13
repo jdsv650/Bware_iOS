@@ -9,11 +9,12 @@
 import Foundation
 import Charts
 
-class AxisValueFormatter: IAxisValueFormatter {
+class AxisValueFormatter: IndexAxisValueFormatter {
+    
     
     var mValues = [String]()
     
-    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+    override func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         // "value" represents the position of the label on the axis (x or y)
         // 1-5 passed in for 0...4
         
@@ -27,9 +28,11 @@ class AxisValueFormatter: IAxisValueFormatter {
         
     }
     
-    init(values :[String])
+    
+    override init(values :[String])
     {
         mValues = values
+        super.init()
     }
     
     

@@ -180,14 +180,14 @@ class GraphMainViewController: UIViewController {
         chart!.data = data
      
         // create and place chart descrioption
-        chart!.chartDescription?.enabled = true
-        chart!.chartDescription?.text = "Number of Bridges Located"
-        chart!.chartDescription?.textAlign = .center
-        chart!.chartDescription?.textColor = UIColor.black
-        chart!.chartDescription?.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
+         chart!.chartDescription.enabled = true
+        chart!.chartDescription.text = "Number of Bridges Located"
+        chart!.chartDescription.textAlign = .center
+        chart!.chartDescription.textColor = UIColor.black
+        chart!.chartDescription.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
         let frame = self.view.frame
         let topLeft = CGPoint(x: (frame.minX+frame.maxX / 2), y: frame.minY)
-        chart!.chartDescription?.position = topLeft
+        chart!.chartDescription.position = topLeft
      
         // misc chart settings
         chart!.drawValueAboveBarEnabled = false
@@ -207,7 +207,7 @@ class GraphMainViewController: UIViewController {
         // xAxis.drawAxisLineEnabled = true
         // xAxis.drawGridLinesEnabled = true
         xAxis.granularity = 1
-        xAxis.valueFormatter = AxisValueFormatter(values: xAxisLabels)
+        xAxis.valueFormatter =  AxisValueFormatter(values: xAxisLabels)
      
         // refresh chart
         chart!.notifyDataSetChanged()

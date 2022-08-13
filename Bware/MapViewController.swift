@@ -495,7 +495,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             let myRequest = manager.request(mutableURLRequest)
         
             // let flurryData = ["event": "getBridgeData api call"];
-            Flurry.logEvent("API_call_getBridgeData", withParameters: nil);
+            Flurry.log(eventName: "API_call_getBridgeData", parameters: nil);
            
             myRequest.responseJSON(options: JSONSerialization.ReadingOptions.mutableContainers)
                 { (Response) in

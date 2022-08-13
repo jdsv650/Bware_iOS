@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if let flurryAPIKey = dictionary["FlurryAPIKey"] as? String
                 {
-                    Flurry.startSession(flurryAPIKey)
+                    Flurry.startSession(apiKey: flurryAPIKey)
                 }
                 
             }
